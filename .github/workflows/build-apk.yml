@@ -1,12 +1,3 @@
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-
-      - name: Generate Gradle Wrapper
-        run: gradle wrapper
-
-      - name: Build Debug APK
-        run: ./gradlew :app:assembleDebug --stacktrace
-
 name: Build APK
 
 on:
