@@ -27,6 +27,10 @@ android {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
+
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
@@ -42,8 +46,8 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.9.3")
     implementation("androidx.core:core-ktx:1.17.0")
 
-    // Room Database
-    val roomVersion = "2.6.1"
+    // Room Database (Cập nhật bản mới tương thích Kotlin 2.x)
+    val roomVersion = "2.7.0-alpha13"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
